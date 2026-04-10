@@ -294,3 +294,30 @@
 .prose-snippy > *:first-child {
   margin-top: 0;
 }
+
+/* hero */
+.catch-copy:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 10px solid #03c2b3;
+    border-top: 10px solid #03c2b3;
+    z-index: 0;
+}
+
+.catch-copy::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right: 10px solid #03c2b3;
+    border-bottom: 10px solid #03c2b3;
+    z-index: 0;
+}

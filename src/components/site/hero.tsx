@@ -54,9 +54,9 @@ export default function Hero() {
             animate="visible"
             custom={0}
             variants={fadeInUp}
-            className="text-xs sm:text-sm md:text-base font-bold tracking-wider mb-3 sm:mb-4 text-white/80"
+            className="text-xs sm:text-sm md:text-base font-bold tracking-wider mb-3 sm:mb-4 text-white"
           >
-            <span className="bg-[#00A094] px-1">業務効率化</span>×Web集客支援
+            <span className="bg-white text-[#03c2b3] px-6 catch-copy relative">業務効率化</span>×<span className="bg-white text-[#03c2b3] px-6 catch-copy relative">Web集客支援</span>
           </motion.p>
 
           <motion.h1
