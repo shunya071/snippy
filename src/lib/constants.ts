@@ -61,7 +61,7 @@ export const NAV_ITEMS = [
   { href: '/services', label: 'サービス' },
   { href: '/process', label: '導入の流れ' },
   { href: '/works', label: '導入事例' },
-  { href: '/blog', label: 'お知らせ' },
+  { href: '/blog', label: 'コラム' },
   { href: '/support', label: 'サポート' },
 ] as const
 
