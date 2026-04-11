@@ -13,4 +13,10 @@ export const authConfig = {
   ],
   session: { strategy: "jwt" },
   pages: { signIn: "/admin/login" },
+  callbacks: {
+    authorized({ auth }) {
+      // 認証済みならアクセス許可、未認証ならログインページへリダイレクト
+      return !!auth?.user
+    },
+  },
 } satisfies NextAuthConfig
