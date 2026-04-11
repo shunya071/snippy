@@ -57,7 +57,7 @@ const fadeInUp = {
 
 export default function Features() {
   return (
-    <section className="relative py-20 lg:py-32 bg-[#f8f8f8]">
+    <section className="relative py-20 lg:py-32 bg-[#f8f8f8] overflow-hidden">
       {/* Decorative blurs */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#e6faf7] rounded-full blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#e6faf7] rounded-full blur-3xl opacity-40 translate-x-1/2 -translate-y-1/2 pointer-events-none" />
