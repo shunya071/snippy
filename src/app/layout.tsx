@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Noto_Sans_JP } from "next/font/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 import "./globals.css"
 
 const notoSansJP = Noto_Sans_JP({
@@ -15,6 +16,9 @@ export const metadata: Metadata = {
   },
   description:
     "サロン・クリニック・飲食店に特化したWeb集客パートナー。サイト制作・LINE構築・業務改善をワンストップでサポートします。",
+  verification: {
+    google: "ph6CuET8M_7iNtahutZd-keKHqao1YsxeWrWH7oCoNs",
+  },
   metadataBase: new URL("https://snippy-web.jp"),
   openGraph: {
     type: "website",
@@ -30,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${notoSansJP.variable} h-full antialiased overflow-x-hidden`}>
+      <GoogleTagManager gtmId="GTM-MBB9TWL6" />
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   )
