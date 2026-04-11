@@ -49,7 +49,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={SNIPPY_LINE_URL} className="text-slate-400 hover:text-[#06C755] transition-colors">
+                <Link href={SNIPPY_LINE_URL} data-gtm-click="line_cta" data-gtm-label="footer" className="text-slate-400 hover:text-[#06C755] transition-colors">
                   LINE相談
                 </Link>
               </li>

@@ -57,6 +57,8 @@ export default function Cta() {
         >
           <Link
             href={SNIPPY_LINE_URL}
+            data-gtm-click="line_cta"
+            data-gtm-label="cta_section"
             className="group inline-flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(6,199,85,0.4)] w-full sm:w-auto"
           >
             <MessageCircle className="w-6 h-6" />

@@ -137,6 +137,8 @@ export default function Process() {
           </p>
           <Link
             href={SNIPPY_LINE_URL}
+            data-gtm-click="line_cta"
+            data-gtm-label="process"
             className="group inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white px-8 py-4 rounded-full font-bold text-[15px] transition-all duration-200 shadow-[0_8px_20px_-6px_rgba(6,199,85,0.4)] hover:shadow-[0_10px_25px_-4px_rgba(6,199,85,0.5)] hover:-translate-y-0.5"
           >
             <MessageCircle className="w-5 h-5" />

@@ -26,7 +26,7 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link href={SNIPPY_LINE_URL} className="inline-flex items-center px-5 py-2.5 bg-[#06C755] text-white text-sm font-medium rounded-full hover:bg-[#05b34c] transition-colors">
+            <Link href={SNIPPY_LINE_URL} data-gtm-click="line_cta" data-gtm-label="header_desktop" className="inline-flex items-center px-5 py-2.5 bg-[#06C755] text-white text-sm font-medium rounded-full hover:bg-[#05b34c] transition-colors">
               無料相談
             </Link>
           </nav>
@@ -58,6 +58,8 @@ export default function Header() {
             ))}
             <Link
               href={SNIPPY_LINE_URL}
+              data-gtm-click="line_cta"
+              data-gtm-label="header_mobile"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[#06C755] text-white text-base font-medium rounded-full hover:bg-[#05b34c] transition-colors"
             >

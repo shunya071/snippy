@@ -92,6 +92,8 @@ export default function Hero() {
           >
             <Link
               href={SNIPPY_LINE_URL}
+              data-gtm-click="line_cta"
+              data-gtm-label="hero"
               className="group inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(6,199,85,0.35)]"
             >
               <MessageCircle className="w-5 h-5" />
