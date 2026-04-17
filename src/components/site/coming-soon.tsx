@@ -38,6 +38,8 @@ export default function ComingSoon({
           </Link>
           <Link
             href={SNIPPY_LINE_URL}
+            data-gtm-click="line_cta"
+            data-gtm-label="coming_soon"
             className="inline-flex items-center px-6 py-3 bg-[#06C755] text-white text-sm font-medium rounded-full hover:bg-[#05b34c] transition-colors"
           >
             LINEで相談する

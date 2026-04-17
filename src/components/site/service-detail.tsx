@@ -30,21 +30,21 @@ export default function ServiceDetail() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-left md:text-center max-w-3xl mx-auto mb-12 md:mb-20"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[#e6faf7] text-[#00bfa6] font-bold text-xs tracking-widest mb-4">
             Service Details
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             お店に合わせて選べる
             <br className="hidden md:block" />
             3つのサービス
           </h2>
-          <div className="w-16 h-1.5 bg-[#00bfa6] mx-auto mt-8 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00bfa6] mt-6 md:mt-8 rounded-full md:mx-auto" />
         </motion.div>
 
         {/* Service blocks */}
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-24">
           {SERVICES.map((service, si) => {
             const Icon = icons[si]
             return (
@@ -91,7 +91,7 @@ export default function ServiceDetail() {
                     return (
                       <div
                         key={tier.key}
-                        className={`${tierColors[ti]} rounded-[2rem] p-8 border ${ti === 2 ? "border-[#00bfa6]" : "border-gray-100"} transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                        className={`${tierColors[ti]} rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 border ${ti === 2 ? "border-[#00bfa6]" : "border-gray-100"} transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
                       >
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 ${tierLabelColors[ti]}`}>
                           {tier.label}

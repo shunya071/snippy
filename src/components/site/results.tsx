@@ -47,10 +47,10 @@ function VoiceCard({ voice, isActive, onClick }: { voice: typeof voices[number];
   return (
     <button
       onClick={onClick}
-      className={`w-full text-left rounded-[28px] p-6 md:p-8 border-2 transition-all duration-500 ${
+      className={`w-full text-left rounded-2xl sm:rounded-[28px] p-5 sm:p-6 md:p-8 border-2 transition-all duration-500 ${
         isActive
           ? "bg-white shadow-[8px_12px_0px_#009180] border-[#33ccb8]/30 scale-100 opacity-100"
-          : "bg-white/80 shadow-none border-transparent scale-[0.92] opacity-60 hover:opacity-80"
+          : "bg-white/80 shadow-none border-transparent md:scale-[0.92] opacity-80 md:opacity-60 hover:opacity-80"
       }`}
     >
       {/* Quote icon — inside the card, no overlap */}
@@ -86,7 +86,7 @@ export default function Results() {
   const [current, setCurrent] = useState(0)
 
   return (
-    <section className="relative w-full bg-[#00bfa6] overflow-hidden py-24 md:py-32">
+    <section className="relative w-full bg-[#00bfa6] overflow-hidden py-16 md:py-32">
       {/* Background pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.15]"
@@ -107,14 +107,14 @@ export default function Results() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-left sm:text-center max-w-2xl mx-auto mb-12 sm:mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-4">
             <span className="text-white font-bold tracking-widest text-xs md:text-sm">
               Snippyを導入した店舗の実績
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
             驚きの
             <span className="relative inline-block">
               導入効果
@@ -124,7 +124,7 @@ export default function Results() {
         </motion.div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
+        <div className="grid grid-cols-3 gap-3 sm:gap-6 md:gap-8 mb-6">
           {stats.map((stat, i) => {
             const Icon = stat.icon
             return (
@@ -135,20 +135,20 @@ export default function Results() {
                 viewport={{ once: true, margin: "-80px" }}
                 custom={0.1 * (i + 1)}
                 variants={fadeInUp}
-                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[28px] p-8 flex flex-col items-center text-center group hover:bg-white/15 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl sm:rounded-[28px] p-4 sm:p-8 flex flex-col items-center text-center group hover:bg-white/15 transition-all duration-300"
               >
-                <div className="text-white/90 font-bold text-lg md:text-xl mb-4 flex items-center gap-2">
-                  <Icon className="w-6 h-6 text-white" />
+                <div className="text-white/90 font-bold text-xs sm:text-lg md:text-xl mb-2 sm:mb-4 flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                  <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
                   {stat.label}
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
                   {stat.prefix && (
-                    <span className="text-3xl font-black text-white">{stat.prefix}</span>
+                    <span className="text-xl sm:text-3xl font-black text-white">{stat.prefix}</span>
                   )}
-                  <span className="text-6xl lg:text-7xl font-black text-white tracking-tighter drop-shadow-md group-hover:scale-105 transition-transform duration-300 origin-bottom tabular-nums">
+                  <span className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tighter drop-shadow-md group-hover:scale-105 transition-transform duration-300 origin-bottom tabular-nums">
                     {stat.value}
                   </span>
-                  <span className="text-2xl lg:text-3xl font-black text-white">{stat.unit}</span>
+                  <span className="text-base sm:text-2xl lg:text-3xl font-black text-white">{stat.unit}</span>
                 </div>
               </motion.div>
             )

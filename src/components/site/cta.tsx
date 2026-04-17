@@ -16,7 +16,7 @@ const fadeInUp = {
 
 export default function Cta() {
   return (
-    <section className="relative bg-[#00bfa6] py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-[#00bfa6] py-16 md:py-32 overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.15]"
@@ -35,12 +35,12 @@ export default function Cta() {
           custom={0}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight tracking-tight mb-4 sm:mb-6">
             まずは気軽に
             <br />
             ご相談ください
           </h2>
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-white/90 text-sm sm:text-lg md:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto text-left sm:text-center">
             「何から始めればいいかわからない」でも大丈夫。
             <br className="hidden sm:block" />
             お店の状況をお聞きして、最適なプランをご提案します。
@@ -57,7 +57,9 @@ export default function Cta() {
         >
           <Link
             href={SNIPPY_LINE_URL}
-            className="group inline-flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-lg px-10 py-5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(6,199,85,0.4)] w-full sm:w-auto"
+            data-gtm-click="line_cta"
+            data-gtm-label="cta_section"
+            className="group inline-flex items-center justify-center gap-2 sm:gap-3 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(6,199,85,0.4)] w-full sm:w-auto"
           >
             <MessageCircle className="w-6 h-6" />
             LINEで無料相談
@@ -73,8 +75,8 @@ export default function Cta() {
           variants={fadeInUp}
           className="mt-8 flex items-center justify-center gap-2 text-white/70 text-sm"
         >
-          <Phone className="w-4 h-4" />
-          <span>お電話でのご相談: 058-XXX-XXXX（平日 10:00〜18:00）</span>
+          <Phone className="w-4 h-4 shrink-0" />
+          <span className="text-xs sm:text-sm">お電話でのご相談: 058-XXX-XXXX（平日 10:00〜18:00）</span>
         </motion.div>
       </div>
     </section>

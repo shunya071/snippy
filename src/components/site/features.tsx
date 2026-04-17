@@ -57,7 +57,7 @@ const fadeInUp = {
 
 export default function Features() {
   return (
-    <section className="relative py-20 lg:py-32 bg-[#f8f8f8]">
+    <section className="relative py-20 lg:py-32 bg-[#f8f8f8] overflow-hidden">
       {/* Decorative blurs */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#e6faf7] rounded-full blur-3xl opacity-60 pointer-events-none" />
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#e6faf7] rounded-full blur-3xl opacity-40 translate-x-1/2 -translate-y-1/2 pointer-events-none" />
@@ -80,12 +80,8 @@ export default function Features() {
             <br />
             選ばれる理由
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed font-medium">
-            現場の忙しさを知っているからこそ、
-            <br className="hidden lg:block" />
-            専門用語を使わず、あなたの
-            <br className="hidden lg:block" />
-            右腕として徹底的に寄り添います。
+          <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-medium">
+            現場の忙しさを知っているからこそ、専門用語を使わず、あなたの右腕として徹底的に寄り添います。
           </p>
         </motion.div>
 

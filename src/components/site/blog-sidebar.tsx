@@ -90,6 +90,8 @@ export default async function BlogSidebar({
         </p>
         <Link
           href={SNIPPY_LINE_URL}
+          data-gtm-click="line_cta"
+          data-gtm-label="blog_sidebar"
           className="inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white px-5 py-2.5 rounded-full text-sm font-bold transition-colors"
         >
           <MessageCircle className="w-4 h-4" />

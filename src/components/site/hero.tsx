@@ -38,7 +38,7 @@ export default function Hero() {
           <Image src={hero} alt="" width={800} height={800} priority className="opacity-50" aria-hidden="true" />
         </div>
         {/* Mobile — centered bottom, subtle */}
-        <div className="lg:hidden absolute right-[-40px] bottom-[80px]">
+        <div className="lg:hidden absolute right-[-40px] bottom-[50px]">
           <Image src={hero} alt="" width={320} height={320} priority className="opacity-[0.12]" aria-hidden="true" />
         </div>
       </div>
@@ -54,9 +54,32 @@ export default function Hero() {
             animate="visible"
             custom={0}
             variants={fadeInUp}
-            className="text-xs sm:text-sm md:text-base font-bold tracking-wider mb-3 sm:mb-4 text-white"
+            className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm md:text-base font-bold tracking-wider mb-3 sm:mb-4 text-white"
           >
-            <span className="bg-white text-[#03c2b3] px-6 catch-copy relative">業務効率化</span>×<span className="bg-white text-[#03c2b3] px-6 catch-copy relative">Web集客支援</span>
+            <motion.span
+              className="catch-copy relative inline-block"
+              initial={{ opacity: 0, scale: 0.8, rotate: -3 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: "backOut" }}
+            >
+              業務効率化
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+              className="text-white/80"
+            >
+              ×
+            </motion.span>
+            <motion.span
+              className="catch-copy relative inline-block"
+              initial={{ opacity: 0, scale: 0.8, rotate: 3 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.5, delay: 0.7, ease: "backOut" }}
+            >
+              Web集客支援
+            </motion.span>
           </motion.p>
 
           <motion.h1
@@ -79,7 +102,7 @@ export default function Hero() {
             className="text-sm sm:text-base md:text-lg leading-relaxed font-medium text-white/90 mb-8 sm:mb-10 max-w-lg"
           >
             サロン・クリニック・飲食店に特化した、
-            <br className="hidden sm:block" />
+            <br />
             岐阜のWeb集客パートナー。
           </motion.p>
 
@@ -92,6 +115,8 @@ export default function Hero() {
           >
             <Link
               href={SNIPPY_LINE_URL}
+              data-gtm-click="line_cta"
+              data-gtm-label="hero"
               className="group inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b34c] text-white font-bold text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(6,199,85,0.35)]"
             >
               <MessageCircle className="w-5 h-5" />

@@ -68,15 +68,15 @@ export default function Cases() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-left md:text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[#e6faf7] text-[#00bfa6] font-bold text-xs tracking-widest mb-4">
             Case Studies
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             導入事例
           </h2>
-          <div className="w-16 h-1.5 bg-[#00bfa6] mx-auto mt-8 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00bfa6] mt-6 md:mt-8 rounded-full md:mx-auto" />
         </motion.div>
 
         <div className="space-y-10">
@@ -90,7 +90,7 @@ export default function Cases() {
               variants={fadeInUp}
               className="bg-white rounded-[2rem] border border-gray-100 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
-              <div className="p-8 md:p-10">
+              <div className="p-5 sm:p-8 md:p-10">
                 {/* Header */}
                 <div className="flex flex-wrap items-center gap-3 mb-2">
                   <span className="px-3 py-1 rounded-full bg-[#e6faf7] text-[#00bfa6] text-xs font-bold">
@@ -132,9 +132,9 @@ export default function Cases() {
                 </div>
 
                 {/* Metrics */}
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:gap-4">
                   {item.metrics.map((metric) => (
-                    <div key={metric.label} className="bg-[#f8f8f8] rounded-xl p-4 text-center min-w-[100px]">
+                    <div key={metric.label} className="bg-[#f8f8f8] rounded-xl p-3 sm:p-4 text-center min-w-[80px] sm:min-w-[100px]">
                       <div className="flex items-center justify-center gap-1 mb-1">
                         <TrendingUp className="w-4 h-4 text-[#00bfa6]" />
                         <span className="text-xl font-black text-[#00bfa6]">{metric.value}</span>

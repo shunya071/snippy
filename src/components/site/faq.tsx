@@ -57,15 +57,15 @@ export default function Faq() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center mb-16"
+          className="text-left md:text-center mb-16"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[#e6faf7] text-[#00bfa6] font-bold text-xs tracking-widest mb-4">
             FAQ
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             よくあるご質問
           </h2>
-          <div className="w-16 h-1.5 bg-[#00bfa6] mx-auto mt-8 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00bfa6] mt-6 md:mt-8 rounded-full md:mx-auto" />
         </motion.div>
 
         {FAQ_ITEMS.map((category, ci) => (
