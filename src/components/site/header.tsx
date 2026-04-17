@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { NAV_ITEMS, SNIPPY_LINE_URL } from "@/lib/constants"
 
@@ -43,31 +44,39 @@ export default function Header() {
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t border-gray-100 bg-white">
-          <nav className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-1">
-            {NAV_ITEMS.map((item) => (
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden border-t border-gray-100 bg-white overflow-hidden"
+          >
+            <nav className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-1">
+              {NAV_ITEMS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base font-medium text-gray-700 hover:text-primary py-3 px-2 rounded-lg hover:bg-gray-50 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
-                key={item.href}
-                href={item.href}
+                href={SNIPPY_LINE_URL}
+                data-gtm-click="line_cta"
+                data-gtm-label="header_mobile"
                 onClick={() => setOpen(false)}
-                className="text-base font-medium text-gray-700 hover:text-primary py-3 px-2 rounded-lg hover:bg-gray-50 transition-colors"
+                className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[#06C755] text-white text-base font-medium rounded-full hover:bg-[#05b34c] transition-colors"
               >
-                {item.label}
+                無料相談
               </Link>
-            ))}
-            <Link
-              href={SNIPPY_LINE_URL}
-              data-gtm-click="line_cta"
-              data-gtm-label="header_mobile"
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[#06C755] text-white text-base font-medium rounded-full hover:bg-[#05b34c] transition-colors"
-            >
-              無料相談
-            </Link>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }

@@ -54,22 +54,22 @@ export default function Process() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center mb-16 md:mb-24"
+          className="text-left md:text-center mb-12 md:mb-24"
         >
           <p className="text-[#00bfa6] font-bold text-sm tracking-widest uppercase mb-3">
             Process
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-4">
             導入の流れ
           </h2>
           <p className="text-gray-600 text-lg mb-4">
             かんたん<span className="text-[#00bfa6] font-bold text-xl px-1">4</span>ステップで始められます
           </p>
           {/* Free badge */}
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#06C755]/10 border border-[#06C755]/20">
-            <span className="w-2 h-2 rounded-full bg-[#06C755] animate-pulse" />
-            <span className="text-sm font-bold text-[#06C755]">
-              ご提案まで完全無料 — まずはお気軽にご相談ください
+          <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#06C755]/10 border border-[#06C755]/20">
+            <span className="w-2 h-2 rounded-full bg-[#06C755] animate-pulse shrink-0" />
+            <span className="text-xs sm:text-sm font-bold text-[#06C755]">
+              ご提案まで完全無料<span className="hidden sm:inline"> — まずはお気軽にご相談ください</span>
             </span>
           </div>
         </motion.div>
@@ -91,10 +91,10 @@ export default function Process() {
                 viewport={{ once: true, margin: "-80px" }}
                 custom={0.1 * (i + 1)}
                 variants={fadeInUp}
-                className="relative flex flex-col items-start md:items-center group"
+                className="relative flex flex-row md:flex-col items-start md:items-center gap-5 md:gap-0 group"
               >
                 {/* Icon circle */}
-                <div className="relative z-10 mb-6 md:mb-8">
+                <div className="relative z-10 mb-0 md:mb-8 shrink-0">
                   <div className={`w-20 h-20 rounded-full bg-white border-2 ${step.free ? "border-[#06C755]/30" : "border-[#e6faf7]"} flex items-center justify-center text-[#00bfa6] shadow-[0_4px_20px_-4px_rgba(0,191,166,0.1)] transition-all duration-300 group-hover:border-[#00bfa6] group-hover:scale-105`}>
                     <div className={`absolute -top-2 -left-2 w-8 h-8 ${step.free ? "bg-[#06C755]" : "bg-[#00bfa6]"} text-white font-bold rounded-full flex items-center justify-center text-sm shadow-md ring-4 ring-white transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6`}>
                       {i + 1}
@@ -104,8 +104,8 @@ export default function Process() {
                 </div>
 
                 {/* Text */}
-                <div className="">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center md:justify-center gap-2">
+                <div>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 md:mb-3 flex items-center md:justify-center gap-2">
                     {step.title}
                     {step.free && (
                       <span className="bg-[#06C755] text-white text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider shadow-sm">
@@ -113,7 +113,7 @@ export default function Process() {
                       </span>
                     )}
                   </h3>
-                  <p className="text-gray-600 text-[15px] leading-relaxed max-w-[280px]">
+                  <p className="text-gray-600 text-sm sm:text-[15px] leading-relaxed md:max-w-[280px]">
                     {step.description}
                   </p>
                 </div>
@@ -129,10 +129,10 @@ export default function Process() {
           viewport={{ once: true, margin: "-80px" }}
           custom={0.5}
           variants={fadeInUp}
-          className="mt-20 pt-10 border-t border-gray-100 text-center flex flex-col items-center"
+          className="mt-14 md:mt-20 pt-10 border-t border-gray-100 text-center flex flex-col items-start sm:items-center"
         >
-          <p className="text-sm text-gray-500 mb-6 flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#00bfa6]" />
+          <p className="text-xs sm:text-sm text-gray-500 mb-6 flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-[#00bfa6] shrink-0" />
             ヒアリングからご提案まで無料。無理な勧誘は一切しません。
           </p>
           <Link

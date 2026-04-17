@@ -80,12 +80,8 @@ export default function Features() {
             <br />
             選ばれる理由
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed font-medium">
-            現場の忙しさを知っているからこそ、
-            <br className="hidden lg:block" />
-            専門用語を使わず、あなたの
-            <br className="hidden lg:block" />
-            右腕として徹底的に寄り添います。
+          <p className="text-base sm:text-lg text-gray-500 leading-relaxed font-medium">
+            現場の忙しさを知っているからこそ、専門用語を使わず、あなたの右腕として徹底的に寄り添います。
           </p>
         </motion.div>
 

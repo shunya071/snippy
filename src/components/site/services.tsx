@@ -21,7 +21,7 @@ const fadeInUp = {
 
 export default function Services() {
   return (
-    <section className="relative py-24 md:py-32 bg-white">
+    <section className="relative py-16 md:py-32 bg-white">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -30,17 +30,17 @@ export default function Services() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="text-left md:text-center max-w-3xl mx-auto mb-12 md:mb-20"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[#e6faf7] text-[#00bfa6] font-bold text-xs tracking-widest mb-4">
             Our Services
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             3つのサービスで、お店の
             <br className="hidden md:block" />
             Web集客をまるごとサポート
           </h2>
-          <div className="w-16 h-1.5 bg-[#00bfa6] mx-auto mt-8 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00bfa6] mt-6 md:mt-8 rounded-full md:mx-auto" />
         </motion.div>
 
         {/* Cards — number + icon + tagline + short description. Minimal, overview-only. */}
@@ -63,7 +63,7 @@ export default function Services() {
                   {/* Accent top bar */}
                   <div className={`${accents[i]} h-1.5`} />
 
-                  <div className="p-8 md:p-10">
+                  <div className="p-6 sm:p-8 md:p-10">
                     {/* Number + Icon */}
                     <div className="flex items-center justify-between mb-6">
                       <span className={`text-4xl font-black ${accentTexts[i]} opacity-20`}>
@@ -102,9 +102,9 @@ export default function Services() {
           viewport={{ once: true }}
           custom={0.3}
           variants={fadeInUp}
-          className="mt-20 pt-12 border-t border-gray-100 text-center"
+          className="mt-14 md:mt-20 pt-10 md:pt-12 border-t border-gray-100 text-left sm:text-center"
         >
-          <p className="text-gray-900 font-bold text-xl mb-2">もっと詳しく知りたい方へ</p>
+          <p className="text-gray-900 font-bold text-lg sm:text-xl mb-2">もっと詳しく知りたい方へ</p>
           <p className="text-gray-500 text-sm mb-8">お店の状況に合わせて、最適なプランをご提案します。</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

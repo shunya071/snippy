@@ -296,28 +296,12 @@
 }
 
 /* hero */
-.catch-copy:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-left: 10px solid #03c2b3;
-    border-top: 10px solid #03c2b3;
-    z-index: 0;
-}
-
-.catch-copy::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-right: 10px solid #03c2b3;
-    border-bottom: 10px solid #03c2b3;
-    z-index: 0;
+.catch-copy {
+  padding: 6px 16px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.85) 100%);
+  color: #00bfa6;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.2);
 }

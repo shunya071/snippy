@@ -4,7 +4,7 @@ import { SERVICES, SNIPPY_LINE_URL } from "@/lib/constants"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white py-12 md:py-16">
+    <footer className="bg-[#0f172a] text-white py-12 md:py-16 pb-20 md:pb-16">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>

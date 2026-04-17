@@ -45,21 +45,23 @@ export default function Support() {
           viewport={{ once: true, margin: "-100px" }}
           custom={0}
           variants={fadeInUp}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-left md:text-center max-w-3xl mx-auto mb-16"
         >
           <span className="inline-block py-1 px-3 rounded-full bg-[#e6faf7] text-[#00bfa6] font-bold text-xs tracking-widest mb-4">
             Support
           </span>
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tight">
             サポート体制
           </h2>
-          <p className="text-gray-500 text-lg mt-6">
-            導入後も安心。あなたのお店の成長を一緒に支えます。
+          <p className="text-gray-500 text-base sm:text-lg mt-4 md:mt-6">
+            導入後も安心。
+            <br className="hidden md:block" />
+            あなたのお店の成長を一緒に支えます。
           </p>
-          <div className="w-16 h-1.5 bg-[#00bfa6] mx-auto mt-8 rounded-full" />
+          <div className="w-16 h-1.5 bg-[#00bfa6] mt-6 md:mt-8 rounded-full md:mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {supports.map((item, i) => {
             const Icon = item.icon
             return (
@@ -72,11 +74,11 @@ export default function Support() {
                 variants={fadeInUp}
                 className="text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-[#e6faf7] text-[#00bfa6] flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:bg-[#00bfa6] group-hover:text-white group-hover:scale-110">
-                  <Icon className="w-7 h-7" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-[#e6faf7] text-[#00bfa6] flex items-center justify-center mx-auto mb-4 sm:mb-6 transition-all duration-300 group-hover:bg-[#00bfa6] group-hover:text-white group-hover:scale-110">
+                  <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="text-sm sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">{item.title}</h3>
+                <p className="text-gray-500 text-xs sm:text-sm leading-relaxed text-left">{item.description}</p>
               </motion.div>
             )
           })}
