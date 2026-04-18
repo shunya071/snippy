@@ -58,7 +58,7 @@ const fadeInUp = {
   }),
 }
 
-export default function Cases() {
+export default function Cases({ showMoreLink = true }: { showMoreLink?: boolean }) {
   return (
     <section className="py-20 md:py-32 bg-[#f8f8f8]">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
@@ -148,22 +148,24 @@ export default function Cases() {
           ))}
         </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={0.5}
-          variants={fadeInUp}
-          className="text-center mt-12"
-        >
-          <Link
-            href="/works"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#00bfa6] text-[#00bfa6] font-bold text-sm hover:bg-[#00bfa6] hover:text-white transition-all duration-300"
+        {showMoreLink && (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={0.5}
+            variants={fadeInUp}
+            className="text-center mt-12"
           >
-            事例をもっと見る
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
+            <Link
+              href="/works"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-[#00bfa6] text-[#00bfa6] font-bold text-sm hover:bg-[#00bfa6] hover:text-white transition-all duration-300"
+            >
+              事例をもっと見る
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </section>
   )
