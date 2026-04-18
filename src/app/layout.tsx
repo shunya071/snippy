@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     siteName: "Snippy",
+    title: "Snippy | 岐阜の店舗ビジネス専門Web集客パートナー",
+    description:
+      "サロン・クリニック・飲食店に特化したWeb集客パートナー。サイト制作・LINE構築・業務改善をワンストップでサポートします。",
+    url: "https://snippy-web.jp",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Snippy | 岐阜の店舗ビジネス専門Web集客パートナー",
+    description:
+      "サロン・クリニック・飲食店に特化したWeb集客パートナー。サイト制作・LINE構築・業務改善をワンストップでサポートします。",
   },
 }
 
