@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
         {/* Mobile — centered bottom, subtle */}
         <div className="lg:hidden absolute right-[-40px] bottom-[50px]">
-          <Image src={hero} alt="" width={320} height={320} priority className="opacity-[0.12]" aria-hidden="true" />
+          <Image src={hero} alt="" width={320} height={320} className="opacity-[0.12]" aria-hidden="true" />
         </div>
       </div>
 

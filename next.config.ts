@@ -13,6 +13,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: ["framer-motion", "lucide-react"],
+  },
 };
 
 export default nextConfig;

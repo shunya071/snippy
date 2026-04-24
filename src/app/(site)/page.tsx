@@ -1,16 +1,18 @@
+import dynamic from "next/dynamic"
 import Hero from "@/components/site/hero"
 import Services from "@/components/site/services"
 import Features from "@/components/site/features"
 import Process from "@/components/site/process"
-import Results from "@/components/site/results"
-import ServiceDetail from "@/components/site/service-detail"
-import Cases from "@/components/site/cases"
-import Testimonials from "@/components/site/testimonials"
-import Faq from "@/components/site/faq"
-import News from "@/components/site/news"
-import Support from "@/components/site/support"
-import Promise from "@/components/site/promise"
-import Cta from "@/components/site/cta"
+
+const Results = dynamic(() => import("@/components/site/results"))
+const ServiceDetail = dynamic(() => import("@/components/site/service-detail"))
+const Cases = dynamic(() => import("@/components/site/cases"))
+const Testimonials = dynamic(() => import("@/components/site/testimonials"))
+const Faq = dynamic(() => import("@/components/site/faq"))
+const News = dynamic(() => import("@/components/site/news"))
+const Support = dynamic(() => import("@/components/site/support"))
+const Promise = dynamic(() => import("@/components/site/promise"))
+const Cta = dynamic(() => import("@/components/site/cta"))
 
 export default function HomePage() {
   return (
