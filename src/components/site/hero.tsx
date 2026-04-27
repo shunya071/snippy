@@ -89,9 +89,9 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black leading-[1.25] tracking-tight mb-4 sm:mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]"
           >
-            お店の集客、
+            ひとつの仕組みが、
             <br />
-            もう悩まない。
+            現場を変える。
           </motion.h1>
 
           <motion.p
@@ -101,9 +101,9 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-sm sm:text-base md:text-lg leading-relaxed font-medium text-white/90 mb-8 sm:mb-10 max-w-lg"
           >
-            サロン・クリニック・飲食店に特化した、
+            ― 集客も、業務も。
             <br />
-            岐阜のWeb集客パートナー。
+            企業を動かす鍵になる。Snippy
           </motion.p>
 
           <motion.div
